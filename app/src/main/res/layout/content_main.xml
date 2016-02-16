@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.b_pachango.jm.parkingwhere.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/titulo"
+            android:id="@+id/textViewTiulo"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="32sp"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:paddingTop="15dp"
+            android:clickable="true"
+            android:id="@+id/linearParking"
+            android:onClick="VentanParking">
+
+            <ImageButton
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/imageButtonPrking"
+                android:src="@drawable/parking1"
+                android:contentDescription="@string/parkingtechado"
+                android:paddingTop="100dp"
+                android:paddingLeft="25dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/parkingTec"
+                android:id="@+id/textViewParkCalle"
+                android:background="#1d4289"
+                android:textColor="#ffffff"
+                android:paddingTop="30dp"
+                android:paddingLeft="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:clickable="true"
+            android:id="@+id/linearCalle"
+            android:onClick="VentanCalle">
+
+            <ImageButton
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/imageButtonCalle"
+                android:contentDescription="@string/calleparkinglogo"
+                android:src="@drawable/street"
+                android:paddingTop="180dp"
+                android:paddingLeft="20dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/parkingCall"
+                android:id="@+id/textView"
+                android:background="#41ac06"
+                android:textColor="#ffffff"
+                android:paddingTop="30dp"
+                android:paddingLeft="15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:clickable="true"
+            android:id="@+id/linearLiast"
+            android:onClick="VentanLista">
+
+            <ImageButton
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/imageButtonLista"
+                android:src="@drawable/androidsort"
+                android:tint="#aecc15"
+                android:contentDescription="@string/listalogo"
+                android:backgroundTint="#ffffff" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/listaParkings"
+                android:id="@+id/textViewLista"
+                android:background="#aecc15"
+                android:textColor="#ffffff"
+                android:paddingTop="30dp"
+                android:paddingLeft="15dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
